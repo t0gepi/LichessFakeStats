@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Meine Erweiterung",
+    "version": "1.0",
+    "description": "Eine Chrome-Erweiterung mit Popup-Fenster",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://lichess.org/*"],
+    "content_scripts": [
+      {
+        "matches": ["https://lichess.org/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "ui/popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    }
+}

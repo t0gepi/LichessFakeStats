@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meine Erweiterung</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="uiscript.js"></script>
+</head>
+<body style="width: 300px; height: 400px;">
+  <h1>Popup-Fenster</h1>
+
+  <div class="form-group">
+    <label for="fakeTitleSelect">Fake Title:</label>
+    <input type="checkbox" id="fakeTitleBox">
+    <select id="fakeTitleSelect" class="form-control">
+      <option value="Option 1">Select...</option>
+      <option value="Option 1">GM</option>
+      <option value="Option 2">IM</option>
+      <option value="Option 3">FM</option>
+      <option value="Option 1">CM</option>
+      <option value="Option 2">LM</option>
+      <option value="Option 3">WCM</option>
+      <option value="Option 3">WFM</option>
+      <option value="Option 3">WIM</option>
+      <option value="Option 3">WGM</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="gameModeSelect">Spielmodus:</label>
+    <select id="gameModeSelect" class="form-control">
+      <option value="Option 1">Select...</option>
+      <option value="blitz">Blitz</option>
+      <option value="rapid">Rapid</option>
+      <option value="bullet">Bullet</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="fakeRatingInput">Fake Rating:</label>
+    <input id="fakeRatingInput"type="number" class="form-control" placeholder="e.g. 2000">
+  </div>
+
+  <button id="submitBtn" class="btn btn-primary">Save</button>
+
+</body>
+</html>
