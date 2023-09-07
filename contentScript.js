@@ -1,3 +1,3 @@
 (() => {
-    // code wird immer ausgeführt sobald lichess.org/** geladen wird
+    // code wird immer ausgeführt sobald lichess.org/** geladen wird.
 })();
