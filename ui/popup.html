@@ -4,14 +4,14 @@
   <title>Meine Erweiterung</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="switchButton.css">
   <script src="lib/jquery-3.7.1.min.js"></script>
 </head>
-<body style="width: 300px; height: 400px;">
+<body>
   <h1>Popup-Fenster</h1>
 
-  <div class="form-group">
+  <div class="row" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
     <label for="fakeTitleSelect">Fake Title:</label>
-    <input type="checkbox" id="fakeTitleBox">
     <select id="fakeTitleSelect" class="form-control">
       <option value="Option 1">Select...</option>
       <option value="Option 1">GM</option>
@@ -24,22 +24,73 @@
       <option value="Option 3">WIM</option>
       <option value="Option 3">WGM</option>
     </select>
+  
+    <div style="margin-top: 10px;">
+      <label for="toggleSwitch">Toggle Switch:</label>
+      <label class="switch" id="toggleSwitch">
+        <input type="checkbox" checked>
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+  
+
+  <div class="modesRow">
+    <div class="mode">
+      <label for="bulletRating">Bullet:</label>
+      <input type="text" class="form-control" id="bulletRating" placeholder="e.g. 2000">
+    </div>
+
+    <div class="mode">
+      <label for="blitzRating">Blitz:</label>
+      <input type="text" class="form-control" id="blitzRating" placeholder="e.g. 2000">
+    </div>
+
+    <div class="mode">
+      <label for="rapidRating">Rapid:</label>
+      <input type="text" class="form-control" id="rapidRating" placeholder="e.g. 2000">
+    </div>
   </div>
 
-  <div class="form-group">
-    <label for="gameModeSelect">Spielmodus:</label>
-    <select id="gameModeSelect" class="form-control">
-      <option value="Option 1">Select...</option>
-      <option value="blitz">Blitz</option>
-      <option value="rapid">Rapid</option>
-      <option value="bullet">Bullet</option>
-    </select>
+  <div class="modesRow">
+    <div class="mode">
+      <label for="classicalRating">Classical:</label>
+      <input type="text" class="form-control" id="classicalRating" placeholder="e.g. 2000">
+    </div>
+
+    <div class="mode">
+      <label for="correspondenceRating">Correspondence:</label>
+      <input type="text" class="form-control" id="correspondenceRating" placeholder="e.g. 2000">
+    </div>
+
+    <div class="mode">
+      <label for="puzzlesRating">Puzzles:</label>
+      <input type="text" class="form-control" id="puzzlesRating" placeholder="e.g. 2000">
+    </div>
   </div>
 
-  <div class="form-group">
-    <label for="fakeRatingInput">Fake Rating:</label>
-    <input id="fakeRatingInput"type="number" class="form-control" placeholder="e.g. 2000">
+  <div class="modesRow">
+    <div class="mode">
+      <label for="puzzleStormRating">PuzzleStorm:</label>
+      <input type="text" class="form-control" id="puzzleStormRating" placeholder="e.g. 2000">
+    </div>
+
+    <div class="mode">
+      <label for="puzzleRacerRating">PuzzleRacer:</label>
+      <input type="text" class="form-control" id="puzzleRacerRating" placeholder="e.g. 2000">
+    </div>
+
+    <div class="mode">
+      <label for="puzzleStreakRating">PuzzleStreak:</label>
+      <input type="text" class="form-control" id="puzzleStreakRating" placeholder="e.g. 2000">
+    </div>
   </div>
+
+
+  <label class="switch">
+    <input type="checkbox" checked>
+    <span class="slider round"></span>
+  </label>
 
   <button id="saveButton" class="btn btn-primary">Save</button>
 

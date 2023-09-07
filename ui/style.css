@@ -1,3 +1,51 @@
-.invalid {
-    border: 1px solid red;
+body {
+    width: 450px;
+    height: 500px;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+
+.row {
+    align-items: center;
+    justify-content: space-between;
+    .form-control {
+        max-width: 100px;
+    }
+}
+
+
+
+
+.modesRow {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Verteilt die Spalten gleichmäßig */
+    gap: 0px; /* Abstand zwischen den Zellen */
+}
+  
+.mode {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriert den Inhalt vertikal */
+    text-align: center; /* Zentriert den Text horizontal */
+}
+  
+
+.mode .form-control {
+    max-width: 100px; /* Passen Sie die maximale Breite nach Bedarf an */
+}
+
+.mode label {
+    margin-bottom: 0;
+}
+  
+/* Oder entfernen Sie das Margin von den Inputs */
+.mode input {
+    margin-top: 0;
 }
