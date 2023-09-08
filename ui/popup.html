@@ -8,32 +8,46 @@
   <script src="lib/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-  <h1>Popup-Fenster</h1>
 
-  <div class="row" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
-    <label for="fakeTitleSelect">Fake Title:</label>
-    <select id="fakeTitleSelect" class="form-control">
-      <option value="Option 1">Select...</option>
-      <option value="Option 1">GM</option>
-      <option value="Option 2">IM</option>
-      <option value="Option 3">FM</option>
-      <option value="Option 1">CM</option>
-      <option value="Option 2">LM</option>
-      <option value="Option 3">WCM</option>
-      <option value="Option 3">WFM</option>
-      <option value="Option 3">WIM</option>
-      <option value="Option 3">WGM</option>
+  <h1>Lichess Fake Stats</h1>
+  <hr>
+
+  <div class="modesRow">
+    <div class="mode">
+      <label for="fakeTitleSelect">Fake Title:</label>
+      <select id="fakeTitleSelect" class="form-control">
+        <option value="Option 1">None</option>
+        <option value="Option 1">GM</option>
+        <option value="Option 2">IM</option>
+        <option value="Option 3">FM</option>
+        <option value="Option 1">CM</option>
+        <option value="Option 2">LM</option>
+        <option value="Option 3">WCM</option>
+        <option value="Option 3">WFM</option>
+        <option value="Option 3">WIM</option>
+        <option value="Option 3">WGM</option>
     </select>
-  
-    <div style="margin-top: 10px;">
-      <label for="toggleSwitch">Toggle Switch:</label>
-      <label class="switch" id="toggleSwitch">
-        <input type="checkbox" checked>
-        <span class="slider round"></span>
+    </div>
+    
+    <div class="mode">
+      <label for="fakePatron">Fake Patron:</label>
+      <label class="switch" id="fakePatron" style="margin-top: 10px;">
+          <input type="checkbox" checked>
+          <span class="slider round"></span>
       </label>
     </div>
-  </div>
+
+    <div class="mode">
+      <label for="toggleSwitch">Toggle Switch:</label>
+      <label class="switch" id="toggleSwitch" style="margin-top: 10px;">
+          <input type="checkbox" checked>
+          <span class="slider round"></span>
+      </label>
+    </div>
   
+  </div>
+
+  <hr>
 
   <div class="modesRow">
     <div class="mode">
@@ -86,13 +100,20 @@
     </div>
   </div>
 
+  <hr>
 
-  <label class="switch">
-    <input type="checkbox" checked>
-    <span class="slider round"></span>
-  </label>
 
-  <button id="saveButton" class="btn btn-primary">Save</button>
+  <div class="footer" style="display: flex; justify-content: space-between; align-items: center; margin: 0px 20px 0px 20px;">
+    <div>
+        <button id="saveButton" class="btn btn-primary">Save</button>
+        <button id="clearButton" class="btn btn-danger">Clear</button>
+    </div>
+    <div>
+        <a class="discord icon" href="https://www.discord.com/dein-profil-link" target="_blank"></a>
+        <a class="github icon" href="https://www.discord.com/dein-profil-link" target="_blank"></a>
+    </div>
+  </div>
+
 
   <script src="uiscript.js"></script>
 </body>
