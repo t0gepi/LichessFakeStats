@@ -7,8 +7,8 @@
     "host_permissions": ["https://lichess.org/*"],
     "content_scripts": [
       {
-        "matches": ["https://lichess.org/*"],
-        "js": ["contentScript.js"]
+        "matches": ["https://lichess.org/@/*"],
+        "js": ["contentscripts/profile.js"]
       }
     ],
     "action": {
