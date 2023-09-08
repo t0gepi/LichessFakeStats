@@ -16,31 +16,31 @@
     <div class="mode">
       <label for="fakeTitleSelect">Fake Title:</label>
       <select id="fakeTitleSelect" class="form-control">
-        <option value="Option 1">None</option>
-        <option value="Option 1">GM</option>
-        <option value="Option 2">IM</option>
-        <option value="Option 3">FM</option>
-        <option value="Option 1">CM</option>
-        <option value="Option 2">LM</option>
-        <option value="Option 3">WCM</option>
-        <option value="Option 3">WFM</option>
-        <option value="Option 3">WIM</option>
-        <option value="Option 3">WGM</option>
+        <option value="None">None</option>
+        <option value="GM">GM</option>
+        <option value="IM">IM</option>
+        <option value="FM">FM</option>
+        <option value="CM">CM</option>
+        <option value="LM">LM</option>
+        <option value="WCM">WCM</option>
+        <option value="WFM">WFM</option>
+        <option value="WIM">WIM</option>
+        <option value="WGM">WGM</option>
     </select>
     </div>
     
     <div class="mode">
       <label for="fakePatron">Fake Patron:</label>
       <label class="switch" id="fakePatron" style="margin-top: 10px;">
-          <input type="checkbox" checked>
+          <input type="checkbox">
           <span class="slider round"></span>
       </label>
     </div>
 
     <div class="mode">
-      <label for="toggleSwitch">Toggle Switch:</label>
-      <label class="switch" id="toggleSwitch" style="margin-top: 10px;">
-          <input type="checkbox" checked>
+      <label for="fakeTrophies">Fake Trophies:</label>
+      <label class="switch" id="fakeTrophies" style="margin-top: 10px;">
+          <input type="checkbox">
           <span class="slider round"></span>
       </label>
     </div>
@@ -51,52 +51,52 @@
 
   <div class="modesRow">
     <div class="mode">
-      <label for="bulletRating">Bullet:</label>
-      <input type="text" class="form-control" id="bulletRating" placeholder="e.g. 2000">
+      <label for="bullet">Bullet:</label>
+      <input type="text" class="rating form-control" id="bullet" maxlength="4" placeholder="e.g. 2000">
     </div>
 
     <div class="mode">
-      <label for="blitzRating">Blitz:</label>
-      <input type="text" class="form-control" id="blitzRating" placeholder="e.g. 2000">
+      <label for="blitz">Blitz:</label>
+      <input type="text" class="rating form-control" id="blitz" placeholder="e.g. 2000">
     </div>
 
     <div class="mode">
-      <label for="rapidRating">Rapid:</label>
-      <input type="text" class="form-control" id="rapidRating" placeholder="e.g. 2000">
-    </div>
-  </div>
-
-  <div class="modesRow">
-    <div class="mode">
-      <label for="classicalRating">Classical:</label>
-      <input type="text" class="form-control" id="classicalRating" placeholder="e.g. 2000">
-    </div>
-
-    <div class="mode">
-      <label for="correspondenceRating">Correspondence:</label>
-      <input type="text" class="form-control" id="correspondenceRating" placeholder="e.g. 2000">
-    </div>
-
-    <div class="mode">
-      <label for="puzzlesRating">Puzzles:</label>
-      <input type="text" class="form-control" id="puzzlesRating" placeholder="e.g. 2000">
+      <label for="rapid">Rapid:</label>
+      <input type="text" class="rating form-control" id="rapid" placeholder="e.g. 2000">
     </div>
   </div>
 
   <div class="modesRow">
     <div class="mode">
-      <label for="puzzleStormRating">PuzzleStorm:</label>
-      <input type="text" class="form-control" id="puzzleStormRating" placeholder="e.g. 2000">
+      <label for="classical">Classical:</label>
+      <input type="text" class="rating form-control" id="classical" placeholder="e.g. 2000">
     </div>
 
     <div class="mode">
-      <label for="puzzleRacerRating">PuzzleRacer:</label>
-      <input type="text" class="form-control" id="puzzleRacerRating" placeholder="e.g. 2000">
+      <label for="correspondence">Correspondence:</label>
+      <input type="text" class="rating form-control" id="correspondence" placeholder="e.g. 2000">
     </div>
 
     <div class="mode">
-      <label for="puzzleStreakRating">PuzzleStreak:</label>
-      <input type="text" class="form-control" id="puzzleStreakRating" placeholder="e.g. 2000">
+      <label for="puzzles">Puzzles:</label>
+      <input type="text" class="rating form-control" id="puzzles" placeholder="e.g. 2000">
+    </div>
+  </div>
+
+  <div class="modesRow">
+    <div class="mode">
+      <label for="puzzleStorm">PuzzleStorm:</label>
+      <input type="text" class="rating form-control" id="puzzleStorm" placeholder="e.g. 2000">
+    </div>
+
+    <div class="mode">
+      <label for="puzzleRacer">PuzzleRacer:</label>
+      <input type="text" class="rating form-control" id="puzzleRacer" placeholder="e.g. 2000">
+    </div>
+
+    <div class="mode">
+      <label for="puzzleStreak">PuzzleStreak:</label>
+      <input type="text" class=" rating form-control" id="puzzleStreak" placeholder="e.g. 2000">
     </div>
   </div>
 
@@ -115,6 +115,6 @@
   </div>
 
 
-  <script src="uiscript.js"></script>
+  <script src="storage.js"></script>
 </body>
 </html>
