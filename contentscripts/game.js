@@ -30,10 +30,9 @@ var gameRegex = /^https:\/\/lichess\.org\/[a-zA-Z0-9]{8,12}$/;
 
     await Promise.all([getFakeTitle(), getFakePatron()]); // wait for data
 
-    
     // now start manipulating
 
-    // change title and patron displayed on the right of the chessboard
+    // change title patron displayed on the right of the chessboard
     let bottom_username = document.querySelector(".ruser-bottom a");
     let usersName;
     
@@ -53,15 +52,17 @@ var gameRegex = /^https:\/\/lichess\.org\/[a-zA-Z0-9]{8,12}$/;
         let playerdivs = div.querySelectorAll('div');
         let playerElements = div.querySelectorAll(".user-link");
 
-        if(playerElements[0].textContent.includes(usersName)){
-            let nameAndRating = playerElements[0].textContent.split(' ');
-            let innerHTML = `<span class="utitle">${fakeTitle}</span>&nbsp;<a class="user-link ulpt" href="/@/${nameAndRating[0]}">${nameAndRating[0]} ${nameAndRating[1]}</a>`
-            playerdivs[0].innerHTML = innerHTML;
+        let index;
+        if(playerElements[0].textContent.includes(usersName)){ 
+            index = 0;
+        } else { index = 1}
+
+        if(playerdivs[index].querySelector('span.utitle')){ // when user already has a title just change that
+            playerdivs[index].querySelector('span.utitle').textContent = fakeTitle;
         }
-        else{
-            let nameAndRating = playerElements[1].textContent.split(' ');
-            let innerHTML = `<span class="utitle">${fakeTitle}</span>&nbsp;<a class="user-link ulpt" href="/@/${nameAndRating[0]}">${nameAndRating[0]} ${nameAndRating[1]}</a>`
-            playerdivs[1].innerHTML = innerHTML;
+        else{ // else fake a new title
+            let innerHTML = `<span class="utitle">${fakeTitle}</span>&nbsp;`;
+            playerdivs[index].innerHTML = innerHTML + playerdivs[index].innerHTML;
         }
     }
 
@@ -98,9 +99,47 @@ var gameRegex = /^https:\/\/lichess\.org\/[a-zA-Z0-9]{8,12}$/;
         subtree: true
     });
 
+    // lastly fake the rating according to the current gameMode (e.g. blitz) and the configured 
+    // rating for that mode.
 
+    // figure out if it is bullet, rapid, blitz classical or correspondence
+    const metaTags = document.querySelectorAll('meta');
+    let contentString = null;
+    for (const metaTag of metaTags) {
+        const content = metaTag.getAttribute('content');
+        if (content && content.includes('game of chess.')) {
+            contentString = content;
+            break; 
+        }
+    }
+    let words = contentString.split(' ');
+    let gameIndex = words.indexOf("game");
+    let gameMode = words[gameIndex - 2].toLowerCase();
+
+    if(["bullet", "blitz", "rapid", "classical", "correspondence"].includes(gameMode)){
+        chrome.storage.sync.get([gameMode], function(result) {
+            if(result[gameMode]) {
+                let fakeRating = result[gameMode];
+                if(fakeRating) {
+                    // faking rating displayed to the right of the board
+                    document.querySelector('.ruser-bottom rating').textContent = fakeRating;
+
+                    // faking rating displayed on the meta info above chat
+                    let div = document.querySelector("div.game__meta__players");
+                    let playerdivs = div.querySelectorAll('div');
+                    let playerElements = div.querySelectorAll(".user-link");
+                    const regex = /\((\d+)\)/;  // for replacing the number between "(" and ")"
+                    if(playerElements[0].textContent.includes(usersName)){
+                        let inner = playerdivs[0].innerHTML.replace(regex, `(${fakeRating})`);
+                        playerdivs[0].innerHTML = inner;
+                    }
+                    else{
+                        let inner = playerdivs[1].innerHTML.replace(regex, `(${fakeRating})`);
+                        playerdivs[1].innerHTML = inner;
+                    }
+                }
+            }
+        });
+    }
 
 })();
-
-
-
