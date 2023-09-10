@@ -9,6 +9,10 @@
       {
         "matches": ["https://lichess.org/@/*"],
         "js": ["contentscripts/profile.js"]
+      },
+      {
+        "matches": ["https://lichess.org/*"],
+        "js": ["contentscripts/game.js"]
       }
     ],
     "action": {
