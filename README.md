@@ -40,7 +40,7 @@ We welcome contributions to LichessFakeStats! If you'd like to help improve this
 - Push to the branch (`git push origin feature/your-feature`).
 - Open a pull request.
 
-Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
+If you have any recommendations to improve the extension, feel free to contact me on discord.
 
 ## Support
 
@@ -51,8 +51,8 @@ If you encounter any issues or have questions about using LichessFakeStats, you 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
 
 ---
 
-Developed with ❤️ by [Your Name](https://github.com/your-github-profile)
+Developed with ❤️ by [t0gepi](https://github.com/t0gepi/)
