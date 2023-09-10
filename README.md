@@ -1,6 +1,6 @@
 # LichessFakeStats 😎
 
-[snapshot](snapshot.png)
+![snapshot](snapshot.png)
 
 LichessFakeStats is a Chrome extension that allows you to customize and fake your Lichess profile statistics in various ways. Whether you want to pretend to be a Grandmaster, have a Patron status, or showcase numerous trophies, this extension lets you have fun with your Lichess profile.
 
