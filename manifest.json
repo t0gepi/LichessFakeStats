@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Meine Erweiterung",
+    "name": "Lichess Fake Stats",
     "version": "1.0",
-    "description": "Eine Chrome-Erweiterung mit Popup-Fenster",
+    "description": "Fake your title, trophies and ratings in various game mode like blitz or bullet.",
     "permissions": ["storage", "tabs"],
     "host_permissions": ["https://lichess.org/*"],
     "content_scripts": [
