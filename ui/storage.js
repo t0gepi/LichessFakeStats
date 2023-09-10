@@ -103,7 +103,7 @@ $("#saveButton").on("click", async () => {
 // Clear Button functionality
 $('#clearButton').on('click', async () => {
     console.log('\nResetting stats...');
-    $('#fakeTitleSelect').val('None');
+    $("#fakeTitleSelect").val($("#fakeTitleSelect option:first").val());
     $('.switch').each(function() {
         $(this).find('input[type="checkbox"]').prop('checked', false);
     });
