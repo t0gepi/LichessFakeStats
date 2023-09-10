@@ -44,7 +44,7 @@ If you have any recommendations to improve the extension, feel free to contact m
 
 ## Support
 
-If you encounter any issues or have questions about using LichessFakeStats, you can reach out to us via:
+If you encounter any issues or have questions about using LichessFakeStats, you can reach out to me via:
 
 - [Discord](https://www.discord.com/users/216163718801653760)
 - [GitHub Issues](https://github.com/t0gepi/LichessFakeStats/issues)
