@@ -7,3 +7,28 @@ ratingInputs.forEach(function(input) {
         }
     });
 });
+
+
+$(document).ready(function() {
+    $("#saveButton").click(function() {
+        $("#saveSuccess").fadeIn();
+        setTimeout(function() {
+            $("#saveSuccess").fadeOut();
+        }, 4000);
+    });
+    $("#clearButton").click(function() {
+        $("#clearSuccess").fadeIn();
+        setTimeout(function() {
+            $("#clearSuccess").fadeOut();
+        }, 4000);
+    });
+});
+
+
+
+
+
+
+
+
+

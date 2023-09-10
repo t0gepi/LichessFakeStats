@@ -65,3 +65,13 @@ h1 {
 .github {
     background-image: url('../icons/github40px.png'); 
 }
+
+
+.alert {
+    margin: 10px;
+    height: 20px;
+    font-size: 14;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
