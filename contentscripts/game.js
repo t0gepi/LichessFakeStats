@@ -86,6 +86,21 @@ var gameRegex = /^https:\/\/lichess\.org\/[a-zA-Z0-9]{8,12}$/;
                 if(fakePatron){
                     a_username.querySelector('i.line').classList.add('patron');
                 }
+                // fake the ratings inside the powerTip
+                modes = ["bullet", "blitz", "rapid", "classical", "correspondence"];
+                modes.forEach(mode => {
+                    chrome.storage.sync.get([mode], function(result) {
+                        if(result[mode]) {
+                            let ratingSpans = elm.querySelectorAll('span');
+                            ratingSpans.forEach(span => {
+                                let titleAttributeValue = span.getAttribute('title');
+                                if (titleAttributeValue && titleAttributeValue.toLowerCase().startsWith(mode.toLowerCase())) {
+                                    span.innerHTML = result[mode];
+                                }
+                            });
+                        }
+                    });
+                });
             }
             observer.observe(document.body, {
                 childList: true,
