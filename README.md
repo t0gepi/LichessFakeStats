@@ -14,9 +14,9 @@ LichessFakeStats is a Chrome extension that allows you to customize and fake you
 
 To install LichessFakeStats, follow these steps:
 
-1. Download the extension from the Chrome Web Store (add link).
-2. Click "Add to Chrome."
-3. Configure your fake statistics in the extension settings.
+1. Download the Repository
+2. Open Google Chrome and open the URL: [chrome://extensions/](chrome://extensions/)
+3. Activate developer mode and load the extension.
 
 ## Usage
 
